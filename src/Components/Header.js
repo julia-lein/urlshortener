@@ -3,7 +3,7 @@ import logo from '../img/logo.png';
 
 function Header() {
     return (
-        <header classNameName="header p-3 text-white">
+        <header className="header p-3 text-white">
             <nav className="navigation navbar navbar-expand-lg navbar-dark ">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/"><img className="bg-light" src={ logo } alt="" width="40" /></a>

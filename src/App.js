@@ -8,7 +8,7 @@ import NotFound from './Pages/NotFound';
 
 function App() {
   return (
-    <body class="d-flex flex-column vh-100">
+    <div className="body d-flex flex-column vh-100">
 
     <BrowserRouter>
        <Header />
@@ -25,7 +25,7 @@ function App() {
 
 
 
-    </body>
+    </div>
   );
 }
 
