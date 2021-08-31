@@ -1,0 +1,53 @@
+body{
+  min-width:320px;        /* Suppose you want minimum width of 1000px */
+  width: auto !important;  /* Firefox will set width as auto */
+  width:320px;            /* As IE6 ignores !important it will set width as 1000px; */
+ 
+}
+
+.header, .navigation, .navigation > .container-fluid {
+  background: #00595c;
+}
+
+.fill {
+  position: relative;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #009499;
+  border: 2px solid #009499;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.4s ease-in;
+  -o-transition:      0.4s ease-in;
+  -ms-transition:     0.4s ease-in;
+  -moz-transition:    0.4s ease-in;
+  -webkit-transition: 0.4s ease-in;
+}
+
+
+.fill:hover {
+  color: whitesmoke;
+  border: 2px #009499 solid;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #009499;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.4s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
