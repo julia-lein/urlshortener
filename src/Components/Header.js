@@ -6,7 +6,7 @@ function Header() {
         <header classNameName="header p-3 text-white">
             <nav className="navigation navbar navbar-expand-lg navbar-dark ">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><img className="bg-light" src={ logo } alt="" width="40" /></a>
+                    <a className="navbar-brand" href="/"><img className="bg-light" src={ logo } alt="" width="40" /></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -22,7 +22,7 @@ function Header() {
                                 <a className="nav-link" href="#">MenuLink3</a>
                             </li>
                         </ul>
-                        <button type="button" className="btn btn-outline-light me-2">Login</button>
+                        <button type="button" className="btn btn-outline-light me-2 login-button"> <a href="/login">Login</a> </button>
                     </div>
                 </div>
             </nav>
