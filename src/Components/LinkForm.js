@@ -35,7 +35,7 @@ function LinkForm() {
                         <div className="col-lg-12">
                             <div className="form-floating mb-3">
                                 <input name="link" type="text" className="form-control linkURL" id="inputLink" value={ inputUrl } required onChange={ handleInputUrl }/>
-                                <label for="inputLink">Shorten your link</label>
+                                <label htmlFor="inputLink">Shorten your link</label>
                             </div>
                         </div>
                         

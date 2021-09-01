@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import LinkForm from './LinkForm';
 import LinkCard from './LinkCard';
 import photo1 from '../img/css-tricks.png';
@@ -6,35 +6,54 @@ import photo2 from '../img/react.png';
 
 
 function Main() {
-    let urls = JSON.parse(localStorage.getItem('urls')) || [];
+
+    const [ links, setLinks ] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:5555/links",
+        {
+            //mode: 'cors',
+            method: "GET",
+            headers:
+            {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response =>
+        {
+            return response.json();
+        })
+        .then(data =>
+        {
+            setLinks(data);
+        })
+        .catch((err) =>
+        {
+            console.log(err);
+        });
+      }, []);
 
     return (
         <main className="flex-shrink-0">
 
             <LinkForm />
 
-{/*             {
-                urls.map(url =>
+            {
+                links.map((link, i) =>
                     {
-                        return (
-                            <LinkCard 
-                            link={url}
-                            photo={ photo1 }
-                        />
+                        return(
+                            <LinkCard key={ i }
+                                link={ link.link }
+                                photo={ link.screenshot }
+                                title={ link.title }
+                                description={ link.description }
+                            />
                         )
                     })
-            } */}
-            <LinkCard 
-                link="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-                photo={ photo1 }
-            />
-            <LinkCard
-                link="https://reactjs.org/" 
-                photo={ photo2 }
-            />
-       
+            }
+
         </main>
-    )
+    );
 }
 
 export default Main;

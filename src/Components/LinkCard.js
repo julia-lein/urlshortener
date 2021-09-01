@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function LinkCard({ link, photo }) {
+function LinkCard({ link, photo, title, description }) {
     return (
         <div className="container col-xxl-8 px-4 py-3 link-card">
                 <div>
@@ -11,9 +11,9 @@ function LinkCard({ link, photo }) {
                         </div>
 
                         <div className="col-10 col-sm-8 col-lg-6">
-                            <p name="title">Titel</p>
+                            <p name="title">{ title }</p>
                             <p name="link"><a href={ link } target="_blank">{ link }</a></p>
-                            <p name="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo similique dolorem commodi nesciunt delectus numquam at? Id, molestias architecto! Voluptatem iusto sequi soluta animi. Provident quos molestias quidem ea enim?</p>
+                            <p name="description">{ description }</p>
                         </div>
                     </div>
                 </div>
