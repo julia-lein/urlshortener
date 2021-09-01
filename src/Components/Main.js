@@ -1,36 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import LinkForm from './LinkForm';
 import LinkCard from './LinkCard';
-import photo1 from '../img/css-tricks.png';
-import photo2 from '../img/react.png';
-
+import getLinks from '../API/getLinks'
 
 function Main() {
 
     const [ links, setLinks ] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5555/links",
-        {
-            //mode: 'cors',
-            method: "GET",
-            headers:
-            {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response =>
-        {
-            return response.json();
-        })
-        .then(data =>
-        {
-            setLinks(data);
-        })
-        .catch((err) =>
-        {
-            console.log(err);
-        });
+        getLinks()
+            .then(links => {
+                setLinks(links);
+            })
       }, []);
 
     return (
