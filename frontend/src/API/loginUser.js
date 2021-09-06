@@ -7,6 +7,7 @@ async function loginUser(user) {
         {
             //mode: 'cors',
             method: "POST",
+            withCredentials: true,
             body: JSON.stringify(user),
             headers:
             {
@@ -15,9 +16,10 @@ async function loginUser(user) {
         })
         .then(response =>
         {
-            console.log("response", response);
+            
             return response.json();
         })
+        .then(data => console.log("response", data))
         .catch((err) =>
         {
             console.log(err);

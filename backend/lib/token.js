@@ -5,13 +5,13 @@ const algorithm = "HS256";
 const create = payload => {
     const options = {
         algorithm,
-        expiresIn: `${300}s`,
+        expiresIn: `${process.env.TOKEN_EXP}s`,
     };
-    return jwt.sign(payload, "efrtzw.ewrthwe34.z5twsegb", options);
+    return jwt.sign(payload, process.env.TOKEN_SECRET, options);
 }
 
 const verify = token => {
-    return jwt.verify(token, "efrtzw.ewrthwe34.z5twsegb", { algorithms: [algorithm] }, (error, payload) => {
+    return jwt.verify(token, process.env.TOKEN_SECRET, { algorithms: [algorithm] }, (error, payload) => {
         if (error) throw new Error("token invalid");
         return payload;
     });
