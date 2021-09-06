@@ -5,7 +5,7 @@ const LinkSchema = mongoose.Schema({
     screenshot: {type:String},
     title: {type:String}, 
     description: {type:String}, 
-});
+}, { versionKey: false });
 
 const Link = mongoose.model("Link", LinkSchema);
 

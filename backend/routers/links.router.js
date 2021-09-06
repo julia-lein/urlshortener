@@ -1,10 +1,11 @@
 import express from "express";
 import linksController from "../controllers/links.controller.js";
+import checkAuth from "../middleware/checkAuth.js";
 
 const router = express.Router();
 
 router.get("/", linksController.readAll);
-router.post("/", linksController.createLink);
+router.post("/", checkAuth, linksController.createLink);
 /* router.post("/", usersController.create);
 router.get("/", usersController.readAll);
 router.get("/:userId", usersController.readOne);
