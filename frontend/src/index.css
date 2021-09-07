@@ -79,3 +79,24 @@
   border-radius: 10px;
   margin-bottom: 20px;
 }
+
+
+.pic-button{
+  position:relative;
+}
+.backtohomepage{
+  top:20px;
+  margin: 0 auto;
+}
+.notfoundpic{
+  margin-top:30px;
+}
+
+.button-back a {
+  color: #009499;
+  text-decoration: none;
+}
+
+.button-back:hover a {
+  color: white;
+}

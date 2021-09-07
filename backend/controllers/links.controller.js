@@ -13,15 +13,25 @@ export default {
 
     createLink: async function (req, res, next) {
         try {
-
-            console.log("request", req.body);
             const result = await Link.createLink(
-                req.body.link,
+                req.body.longLink,
                 req.body.screenshot,
                 req.body.title,
                 req.body.description
             );
-            res.json(result);
+            
+            res.send(result);
+        } catch (error) {
+            next(error);
+        }
+    },
+
+    readOne: async function (req, res, next) {
+        try {
+            const link = await Link.readOne(req.params.linkHash);
+            if (!link) return res.redirect("http://localhost:3000/notfound");
+
+            res.redirect(302, link.longLink);
         } catch (error) {
             next(error);
         }

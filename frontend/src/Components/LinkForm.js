@@ -25,7 +25,7 @@ function LinkForm() {
     {
       const newUrl =
       {
-        link: inputUrl,
+        longLink: inputUrl,
         screenshot: "https://cdn.pixabay.com/photo/2020/04/30/15/34/code-5113374_960_720.jpg",
         title: inputTitle,
         description: inputDesc

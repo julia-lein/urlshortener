@@ -12,7 +12,7 @@ function Main() {
             .then(links => {
                 setLinks(links);
             })
-      }, []);
+      }, [links]);
 
     return (
         <main className="flex-shrink-0">
@@ -24,7 +24,7 @@ function Main() {
                     {
                         return(
                             <LinkCard key={ i }
-                                link={ link.link }
+                                link={ "http://localhost:5555/links/" + link.shortLink }
                                 photo={ link.screenshot }
                                 title={ link.title }
                                 description={ link.description }

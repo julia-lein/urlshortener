@@ -12,7 +12,7 @@ export default {
 
             console.log("user: ", user);
 
-            const token = tokenHandler.create({email: user.email, name: user.name});
+/*             const token = tokenHandler.create({email: user.email, name: user.name});
 
             res.cookie("token", token, {
                 maxAge: 5 * 60 * 1000,
@@ -20,7 +20,7 @@ export default {
                 domain: "localhost"
             });
 
-            console.log("token: ", token);
+            console.log("token: ", token); */
             res.json(user);
 
 
