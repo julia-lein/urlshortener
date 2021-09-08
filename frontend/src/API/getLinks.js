@@ -1,7 +1,9 @@
-async function getLinks() {
-	    
-    const url = "http://localhost:5555/links";
+import env from "react-dotenv";
 
+async function getLinks() {
+ 
+    const url = `${env.URL}:${env.B_PORT}/links`;
+console.log(url);
     let links = [];
 
     links = await fetch(url,

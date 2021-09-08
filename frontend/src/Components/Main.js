@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import LinkForm from './LinkForm';
 import LinkCard from './LinkCard';
-import getLinks from '../API/getLinks'
+import getLinks from '../API/getLinks';
+import env from "react-dotenv";
 
 function Main() {
 
@@ -24,7 +25,7 @@ function Main() {
                     {
                         return(
                             <LinkCard key={ i }
-                                link={ "http://localhost:5555/links/" + link.shortLink }
+                                link={ `${env.URL}:${env.B_PORT}/links/${link.shortLink}` }
                                 photo={ link.screenshot }
                                 title={ link.title }
                                 description={ link.description }

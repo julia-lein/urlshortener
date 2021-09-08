@@ -1,6 +1,8 @@
+import env from "react-dotenv";
+
 async function postLink(link) {
 	    
-    const url = "http://localhost:5555/links";
+    const url = `${env.URL}:${env.B_PORT}/links`;
 
     await fetch(url,
         {

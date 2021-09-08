@@ -1,6 +1,8 @@
+import env from "react-dotenv";
+
 async function loginUser(user) {
 	    
-    const url = "http://localhost:5555/users/login";
+    const url = `${env.URL}:${env.B_PORT}/users/login`;
     console.log(user);
 
     await fetch(url,

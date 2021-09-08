@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './Components/Header.js';
 import StartPage from './Pages/StartPage';
