@@ -4,7 +4,6 @@ async function postLink(link) {
 
     await fetch(url,
         {
-            //mode: 'cors',
             method: "POST",
             body: JSON.stringify(link),
             headers:

@@ -6,7 +6,6 @@ async function getLinks() {
 
     links = await fetch(url,
         {
-            //mode: 'cors',
             method: "GET",
             headers:
             {

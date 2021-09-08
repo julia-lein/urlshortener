@@ -1,5 +1,4 @@
 import User from "../models/user.model.js";
-import tokenHandler from "../lib/token.js";
 
 export default {
     loginByEmail: async function (req, res, next) {
@@ -12,15 +11,6 @@ export default {
 
             console.log("user: ", user);
 
-/*             const token = tokenHandler.create({email: user.email, name: user.name});
-
-            res.cookie("token", token, {
-                maxAge: 5 * 60 * 1000,
-                httpOnly: true,
-                domain: "localhost"
-            });
-
-            console.log("token: ", token); */
             res.json(user);
 
 

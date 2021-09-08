@@ -13,13 +13,13 @@ function Header() {
                     <div className="collapse navbar-collapse text-end" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
                             <li className="nav-item text-end">
-                                <a className="nav-link active" aria-current="page" href="#">MenuLink1</a>
+                                <a className="nav-link active" aria-current="page" href="#">Services</a>
                             </li>
                             <li className="nav-item text-end">
-                                <a className="nav-link" href="#">MenuLink2</a>
+                                <a className="nav-link" href="#">Prices</a>
                             </li>
                             <li className="nav-item text-end">
-                                <a className="nav-link" href="#">MenuLink3</a>
+                                <a className="nav-link" href="#">About</a>
                             </li>
                         </ul>
                         <button type="button" className="btn btn-outline-light me-2 login-button"> <a href="/login">Login</a> </button>

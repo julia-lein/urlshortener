@@ -22,7 +22,6 @@ function Login() {
         email: inputEmail,
         password: inputPassword
       }
-      //console.log(user);
 
       login(user);
 

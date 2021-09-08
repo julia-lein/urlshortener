@@ -5,7 +5,6 @@ async function loginUser(user) {
 
     await fetch(url,
         {
-            //mode: 'cors',
             method: "POST",
             withCredentials: true,
             body: JSON.stringify(user),
