@@ -34,12 +34,8 @@ function LinkForm({ links, setLinks }) {
       }
       console.log(newUrl);
 
-      postLink(newUrl);
-
-      getLinks()
-            .then(links => {
-                setLinks(links);
-            });
+      postLink(newUrl)
+        .then(newLink => setLinks([...links, newLink]));
 
       setInputUrl("");
       setInputTitle("");

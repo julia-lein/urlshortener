@@ -4,7 +4,7 @@ async function postLink(link) {
 	    
     const url = `${env.URL}:${env.B_PORT}/links`;
 
-    await fetch(url,
+    const newLink = await fetch(url,
         {
             method: "POST",
             body: JSON.stringify(link),
@@ -22,7 +22,7 @@ async function postLink(link) {
             console.log(err);
         });
     
-    return null;
+    return newLink;
 }
 
 export default postLink;
