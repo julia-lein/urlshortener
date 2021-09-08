@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import postLink from '../API/postLink';
+import getLinks from '../API/getLinks';
+import LinksList from './LinksList';
 
-function LinkForm() {
+function LinkForm({ links, setLinks }) {
     const [ inputUrl, setInputUrl ] = useState("");
     const [ inputTitle, setInputTitle ] = useState("");
     const [ inputDesc, setInputDesc ] = useState("");
@@ -33,6 +35,11 @@ function LinkForm() {
       console.log(newUrl);
 
       postLink(newUrl);
+
+      getLinks()
+            .then(links => {
+                setLinks(links);
+            });
 
       setInputUrl("");
       setInputTitle("");
@@ -72,6 +79,8 @@ function LinkForm() {
                         
                     </form>
                 </div>
+
+                <LinksList links={ links } />
         </div>
     )
 }
