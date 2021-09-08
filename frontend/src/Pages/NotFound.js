@@ -1,6 +1,4 @@
 import React from 'react'
-import Main from '../Components/Main'
-import StartPage from './StartPage'
 import notfound from '../img/404-page.jpg'
 
 

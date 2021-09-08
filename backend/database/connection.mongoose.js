@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
-
-const mongoDbURL = "mongodb+srv://Julia:vasilisa1@cluster0.hoqzk.mongodb.net/urlshortener?retryWrites=true&w=majority";
+import dotenv from "dotenv";
+dotenv.config();
 
 mongoose.connect(
-	mongoDbURL,
+	process.env.MONGODB_URI,
 	{
 		useNewUrlParser: true,
 		//useUnifiedTopology: true,

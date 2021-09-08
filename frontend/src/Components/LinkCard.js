@@ -11,7 +11,7 @@ function LinkCard({ link, photo, title, description }) {
                         </div>
 
                         <div className="col-10 col-sm-8 col-lg-6">
-                            <p name="title">{ title }</p>
+                            <h4 name="title">{ title }</h4>
                             <p name="link"><a href={ link } target="_blank">{ link }</a></p>
                             <p name="description">{ description }</p>
                         </div>
